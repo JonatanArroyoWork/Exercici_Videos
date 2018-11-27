@@ -10,22 +10,27 @@ public class User {
 	public String surname;
 	private String password;
 	private Date regDate;
-	private ArrayList<Video> videoList;
+	private List<Video> videoList;
 	
 		//Constructor de clase
 	
 	public User ( String name, String surname, String password, Date regDate,
-				ArrayList<Video> videoList) {
+				ArrayList<Video> videoList) throws Exception {
+		
+		if (name == null) throw new Exception ("name can't be blank");
 		this.name = name;
+		if (surname == null) throw new Exception ("surname can't be blank");
 		this.surname = surname;
+		if (password == null) throw new Exception ("surname can't be blank");
 		this.password = password;
+		if (regDate == null) throw new Exception ("regDate can't be blank");
 		this.regDate = regDate;
 		videoList = new ArrayList<Video>();
 	}
 	
 		//Constructor vacío
 	public User () {
-		videoList = new ArrayList<Video>();
+		videoList = new  ArrayList<Video>();
 	}
 	
 	//Getters & Setters
@@ -76,17 +81,13 @@ public class User {
 		return results;
 	}
 
-	public void addVideo(Video title){
+	public void addVideo(Video title) throws Exception {
+		if (title == null) throw new Exception ("the title can't be blank!!!");
 		this.videoList.add(title);
 	}
 		
-	public ArrayList<Video> getVideoList() {
+	public List<Video> getVideoList() {
 		return videoList;
-	}
-
-	public void setVideoList(String string, String string2, String string3) {
-		// TODO Auto-generated method stub
-		
 	}
 	
 }

@@ -12,9 +12,12 @@ public class Video {
 	public ArrayList<String> tags;
 
 		//Constructor
-	public Video( URL url, String title, ArrayList<String> tags) {
+	public Video( URL url, String title, ArrayList<String> tags) throws Exception{
+		if (url == null) throw new Exception ("url can't be blank!!");
 		this.url = url;
+		if (title == null) throw new Exception ("title can't be blank!!");
 		this.title = title;
+		if (tags == null) throw new Exception ("tags can't be blank!!");
 		this.tags = tags;
 	}
 	
@@ -41,7 +44,8 @@ public class Video {
 	public List<String> getTags() {
 		return tags;
 	}
-	public void setTags(ArrayList<String> tags) {
+	public void setTags(ArrayList<String> tags) throws Exception {
+		if (tags == null) throw new Exception ("the tags can't be blank!!!");
 		this.tags = tags;
 	}
 	

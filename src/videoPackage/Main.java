@@ -1,15 +1,11 @@
 package videoPackage;
 
-import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.ArrayList;
 import java.util.Date;
 
 public class Main {
 
-	public static void main(String[] args) throws MalformedURLException {
-		// TODO Auto-generated method stub
-		
+	public static void main(String[] args) throws Exception {
 		
 		Video video1 = new Video();
 		video1.setTitle("comunion");
@@ -35,7 +31,6 @@ public class Main {
 		String tags4 = new String("mudanza,casa,muebles");
 		video4.addTags(tags4);
 		
-		
 		//Instancio un usuario
 		User user1 = new User() ;
 			user1.name = ("Jonatan");
@@ -53,7 +48,6 @@ public class Main {
 			user2.addVideo(video3);
 			user2.addVideo(video4);
 	
-				
 				User[] User = {user1, user2};
 				
 			for (User u: User) {	
@@ -67,9 +61,8 @@ public class Main {
 				
 		}
 	
-
 	private static Date Date(int i, int j, int k) {
-		// TODO Auto-generated method stub
+		
 		return null;
 	}
 
